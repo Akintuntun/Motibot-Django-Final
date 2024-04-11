@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Homepage - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+   <div class="container-home" style="background-image: url('{% static "image/backgroundHome.png" %}');">
+        <div class="logs" style="background-image: url('{% static "image/element.png" %}');">
+            <div class="LeftSide">
+                <h1 id="slogan">Motibot: Empowering Minds, Inspiring Change</h1>
+                <p id="subslogan">Embrace MotiBot as your trusted companion in promoting positive change and nurturing a healthier college experience.</p>
+                <button onclick="window.location.href='{% url 'chat' %}'" class="chatBtn">CHAT NOW</button>
+
+            </div>
+            
+            <h1 id="RightSide"></h1>
+           
+        </div>
+   </div>
+{% endblock %}
+
+

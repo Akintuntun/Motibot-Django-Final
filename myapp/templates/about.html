@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    About - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div style="background-image: url('{% static "image/bbAbout.jpg" %}');" class = "aboutPage">
+    <div class="aboutMotibot">
+        <div class="txt">
+            <p> The MotiBot application described is solely intended for research purposes. It has been developed by a team of Computer Science students from Laguna State Polytechnic University (LSPU) San Pablo as part of their capstone project. MotiBot aims to test the suitability of the Bi-directional Long Short-Term Memory (BiLSTM) algorithm for potential applications in mental health support. Please note that while the students have applied rigorous research and cutting-edge technologies in its development, MotiBot has not undergone validation for practical use. Users should be aware that its effectiveness as a mental health support tool has not been confirmed, and it should not be relied upon as such.</p>
+    
+        </div>
+    </div>
+    <div class="imageContainer">
+        <img src="{% static 'image/logo.png' %}" alt="Logo" id="aboutLogo">
+    </div>
+    
+</div>
+{% endblock %}

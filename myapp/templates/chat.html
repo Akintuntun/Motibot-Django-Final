@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    chatpage - {{ block.super }}
+{% endblock %}
+
+{% block navigation %}
+    <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">HOME</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div style="background-image: url('{% static "image/BackgroundMain.png" %}');" class = "chatpage">
+    <div class="chatpage_container">
+        <div class="chat_container">
+            <div class="conversation">
+                {% comment %} conversation {% endcomment %}
+            </div>
+            <div class="chatbox">
+                <div class="prompt">
+                    <input type="text" id="userInput" placeholder="Type your message here...">
+                    <button id="sendBtn">
+                        <img src="{% static 'image/send.png' %}" alt="Logo" id="sendIcon">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+{% endblock %}
