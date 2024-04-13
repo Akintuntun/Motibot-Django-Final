@@ -291,6 +291,13 @@ body{
     height: 5vh;
 }
 
+/* Chatbubbles*/
+.usertext{
+    text-align: right;
+    font-size: 1.5vw;
+    font-family: 'Outfit', sans-serif;
+}
+
 /* Team Members */
 
 .containerMembers{

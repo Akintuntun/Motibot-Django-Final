@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block title %}
     chatpage - {{ block.super }}
 {% endblock %}
-
 {% block navigation %}
     <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">HOME</a>
 {% endblock %}
@@ -13,8 +11,8 @@
 <div style="background-image: url('{% static "image/BackgroundMain.png" %}');" class = "chatpage">
     <div class="chatpage_container">
         <div class="chat_container">
-            <div class="conversation">
-                {% comment %} conversation {% endcomment %}
+            <div class="conversation" id="chatbot">
+             {% comment %} conversation {% endcomment %}
             </div>
             <div class="chatbox">
                 <div class="prompt">
@@ -27,4 +25,24 @@
         </div>
     </div>
 </div> 
+<script>
+    function getUserResponse(){
+        var usertext = $('#userInput').val();
+        var userHTML = "<p class='usertext'> User: <span>"+usertext+"</span></p>";
+        $('#userInput').val("");
+        $('#chatbot').append(userHTML);
+    }
+    $('#sendBtn').click(function(){
+        getUserResponse();
+    })
+    $('#userInput').keypress(function (event) {
+        // Check if Enter key is pressed (key code 13)
+        if (event.which === 13) {
+            // Prevent default behavior of Enter key (form submission)
+            event.preventDefault();
+            // Trigger click event on send button
+            $('#sendBtn').click();
+        }
+    });
+</script>
 {% endblock %}
