@@ -10,16 +10,21 @@
 {% endblock %}
 
 {% block content %}
-<div class="chatpage_container">
-    <div class="chat_container">
-        <div class="responsive-iframe-container">
-        <div class="responsive-iframe">
-        <iframe
-            src="https://opslime-motibot.hf.space"
-        ></iframe>
-        </div>
-        </div>
+<div style="background-image: url('{% static "image/BackgroundMain.png" %}');" class = "chatpage">
+    <div class="chatpage_container">
+        <div class="chat_container">
+            <div class="conversation">
+                {% comment %} conversation {% endcomment %}
+            </div>
+            <div class="chatbox">
+                <div class="prompt">
+                    <input type="text" id="userInput" placeholder="Type your message here...">
+                    <button id="sendBtn">
+                        <img src="{% static 'image/send.png' %}" alt="Logo" id="sendIcon">
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</div> 
 {% endblock %}
