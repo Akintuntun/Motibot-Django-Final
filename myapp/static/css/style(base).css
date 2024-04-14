@@ -20,6 +20,7 @@ body{
 
 
 .navbar-brand{
+    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -244,11 +245,24 @@ body{
     flex-direction: column;
     border-radius: 25px;
     flex-basis: 85%;
+    max-height: 85vh;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.conversation{
-    flex-basis: 85%;
+
+
+.conversation::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.conversation::-webkit-scrollbar-thumb {
+    background-color: #C3EDC0;;
+    border-radius: 5px; 
+}
+
+
+.conversation::-webkit-scrollbar-thumb:hover {
+    background-color: #44E15D;
 }
 
 .chatbox{
@@ -273,7 +287,7 @@ body{
     height: 6vh;
     border-radius: 15px;
     border: none;
-    font-size: 1.5vw;
+    font-size: 20px;
     font-family: 'Outfit', sans-serif;
     padding-left: 10px;
     padding-right: 10px;
@@ -291,17 +305,46 @@ body{
     height: 5vh;
 }
 
-/* Chatbubbles*/
-.usertext{
-    text-align: right;
-    font-size: 1.5vw;
-    font-family: 'Outfit', sans-serif;
+.conversation {
+    flex-basis: 85%; 
+    overflow-y: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
 }
-.botText{
-    text-align: right;
-    font-size: 1.5vw;
-    font-family: 'Outfit', sans-serif;
+
+.user{
+    text-align: end;
+    margin-right: 2%;
 }
+
+/* Chat Bubbles */
+
+.usertext, .botText {
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+    word-wrap: break-word; 
+    white-space: normal;
+    max-width: 40%;
+    padding: 1%;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.usertext {
+    background-color: #C3EDC0;;
+    align-self: flex-end;
+    margin-right: 2%;
+}
+
+.botText {
+    background-color: #C3EDC0;;
+    align-self: flex-start;
+}
+
 
 /* Team Members */
 

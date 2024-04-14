@@ -8,11 +8,11 @@
 {% endblock %}
 
 {% block content %}
-<div style="background-image: url('{% static "image/BackgroundMain.png" %}');" class = "chatpage">
+<div style="background-image: url('{% static "image/BackgroundMain.png" %}');" class="chatpage">
     <div class="chatpage_container">
         <div class="chat_container">
             <div class="conversation" id="chatbot">
-             {% comment %} conversation {% endcomment %}
+                {% comment %} conversation {% endcomment %}
             </div>
             <div class="chatbox">
                 <div class="prompt">
@@ -26,21 +26,24 @@
         </div>
     </div>
 </div> 
+
 <script>
-    function getUserResponse(){
+    function getUserResponse() {
         var usertext = $('#userInput').val();
-        var userHTML = "<p class='usertext'> User: <span>"+usertext+"</span></p>";
+        var userHTML = "<p class='usertext'> <span>" + usertext + "</span></p><p class = 'user'>User</p>";
         $('#userInput').val("");
         $('#chatbot').append(userHTML);
-        $.get('/myapp/getResponse',{userMessage:usertext}).done(function(data){
-            var returnedmessage = "<p class='botText'> Motibot: <span>"+data+"</span></p>";
+        $('#chatbot').scrollTop($('#chatbot')[0].scrollHeight);
+        $.get('/myapp/getResponse', { userMessage: usertext }).done(function(data) {
+            var returnedmessage = "<p class='botText'><span>" + data + "</span></p><p>Motibot</p>";
             $('#chatbot').append(returnedmessage);
+            $('#chatbot').scrollTop($('#chatbot')[0].scrollHeight);
         })
     }
-    $('#sendBtn').click(function(){
+    $('#sendBtn').click(function() {
         getUserResponse();
     })
-    $('#userInput').keypress(function (event) {
+    $('#userInput').keypress(function(event) {
         if (event.which === 13) {
             event.preventDefault();
             $('#sendBtn').click();
