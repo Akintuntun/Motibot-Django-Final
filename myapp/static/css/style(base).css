@@ -297,6 +297,11 @@ body{
     font-size: 1.5vw;
     font-family: 'Outfit', sans-serif;
 }
+.botText{
+    text-align: right;
+    font-size: 1.5vw;
+    font-family: 'Outfit', sans-serif;
+}
 
 /* Team Members */
 

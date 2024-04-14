@@ -16,7 +16,8 @@
             </div>
             <div class="chatbox">
                 <div class="prompt">
-                    <input type="text" id="userInput" placeholder="Type your message here...">
+                    {% csrf_token %}
+                    <input type="text" id="userInput" name="userMessage" placeholder="Type your message here...">
                     <button id="sendBtn">
                         <img src="{% static 'image/send.png' %}" alt="Logo" id="sendIcon">
                     </button>
@@ -31,16 +32,17 @@
         var userHTML = "<p class='usertext'> User: <span>"+usertext+"</span></p>";
         $('#userInput').val("");
         $('#chatbot').append(userHTML);
+        $.get('/myapp/getResponse',{userMessage:usertext}).done(function(data){
+            var returnedmessage = "<p class='botText'> Motibot: <span>"+data+"</span></p>";
+            $('#chatbot').append(returnedmessage);
+        })
     }
     $('#sendBtn').click(function(){
         getUserResponse();
     })
     $('#userInput').keypress(function (event) {
-        // Check if Enter key is pressed (key code 13)
         if (event.which === 13) {
-            // Prevent default behavior of Enter key (form submission)
             event.preventDefault();
-            // Trigger click event on send button
             $('#sendBtn').click();
         }
     });
