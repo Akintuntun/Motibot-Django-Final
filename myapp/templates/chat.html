@@ -1,25 +1,53 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block title %}
     chatpage - {{ block.super }}
 {% endblock %}
-
 {% block navigation %}
     <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">HOME</a>
 {% endblock %}
 
 {% block content %}
-<div class="chatpage_container">
-    <div class="chat_container">
-        <div class="responsive-iframe-container">
-        <div class="responsive-iframe">
-        <iframe
-            src="https://opslime-motibot.hf.space"
-        ></iframe>
-        </div>
-        </div>
+<div style="background-image: url('{% static "image/BackgroundMain.png" %}');" class="chatpage">
+    <div class="chatpage_container">
+        <div class="chat_container">
+            <div class="conversation" id="chatbot">
+                {% comment %} conversation {% endcomment %}
+            </div>
+            <div class="chatbox">
+                <div class="prompt">
+                    {% csrf_token %}
+                    <input type="text" id="userInput" name="userMessage" placeholder="Type your message here...">
+                    <button id="sendBtn">
+                        <img src="{% static 'image/send.png' %}" alt="Logo" id="sendIcon">
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</div> 
+
+<script>
+    function getUserResponse() {
+        var usertext = $('#userInput').val();
+        var userHTML = "<p class='usertext'> <span>" + usertext + "</span></p><p class = 'user'>User</p>";
+        $('#userInput').val("");
+        $('#chatbot').append(userHTML);
+        $('#chatbot').scrollTop($('#chatbot')[0].scrollHeight);
+        $.get('/myapp/getResponse', { userMessage: usertext }).done(function(data) {
+            var returnedmessage = "<p class='botText'><span>" + data + "</span></p><p>Motibot</p>";
+            $('#chatbot').append(returnedmessage);
+            $('#chatbot').scrollTop($('#chatbot')[0].scrollHeight);
+        })
+    }
+    $('#sendBtn').click(function() {
+        getUserResponse();
+    })
+    $('#userInput').keypress(function(event) {
+        if (event.which === 13) {
+            event.preventDefault();
+            $('#sendBtn').click();
+        }
+    });
+</script>
 {% endblock %}
