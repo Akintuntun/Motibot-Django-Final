@@ -57,7 +57,8 @@ def team_members(request):
     return render(request, "teammembers.html")
 
 def chat(request):
-    return render(request, "chat.html")
+    welcome_message = "Welcome to the chat! How can I assist you today?"
+    return render(request, "chat.html", {'welcome_message': welcome_message})
 
 
 def getResponse(request):
