@@ -5,6 +5,7 @@
 {% endblock %}
 {% block navigation %}
     <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">HOME</a>
+    <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">DISCLAIMER</a>
 {% endblock %}
 
 {% block content %}
@@ -13,6 +14,44 @@
         <div class="chat_container">
             <div class="conversation" id="chatbot">
                 {% comment %} conversation {% endcomment %}
+            </div>
+            <div class="suggestions">
+                <div class="dropup-center dropup elements">
+                    <button class="btn btn-secondary dropdown-toggle dropdownbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        GREETINGS
+                    </button>
+                    <ul class="dropdown-menu suggest">
+                        <li><a class="dropdown-item" href="#">Hello</a></li>
+                        <li><a class="dropdown-item" href="#">Is anyone there?</a></li>
+                        <li><a class="dropdown-item" href="#">Good morning</a></li>
+                        <li><a class="dropdown-item" href="#">Good afternoon</a></li>
+                        <li><a class="dropdown-item" href="#">Good night</a></li>
+                    </ul>
+                </div>
+                <div class="dropup-center dropup elements">
+                    <button class="btn btn-secondary dropdown-toggle dropdownbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        FAQS
+                    </button>
+                    <ul class="dropdown-menu suggest">
+                        <li><a class="dropdown-item" href="#">What is mental health?</a></li>
+                        <li><a class="dropdown-item" href="#">Why is mental health important?</a></li>
+                        <li><a class="dropdown-item" href="#">What does it mean to have a mental illness?</a></li>
+                        <li><a class="dropdown-item" href="#">What are some of the warning signs of mental illness?</a></li>
+                        <li><a class="dropdown-item" href="#">Can people with mental illness recover?</a></li>
+                    </ul>
+                </div>
+                <div class="dropup-center dropup elements">
+                    <button class="btn btn-secondary dropdown-toggle dropdownbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        SUPPORT
+                    </button>
+                    <ul class="dropdown-menu suggest">
+                        <li><a class="dropdown-item" href="#">Could you help me?</a></li>
+                        <li><a class="dropdown-item" href="#">I feel like I'm alone</a></li>
+                        <li><a class="dropdown-item" href="#">I feel ugly.</a></li>
+                        <li><a class="dropdown-item" href="#">I wish i was better than them</a></li>
+                        <li><a class="dropdown-item" href="#">I am so depressed</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="chatbox">
                 <div class="prompt">
@@ -26,7 +65,6 @@
         </div>
     </div>
 </div> 
-
 <script>
     function getUserResponse() {
         var usertext = $('#userInput').val();

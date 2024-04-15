@@ -320,6 +320,41 @@ body{
     margin-right: 2%;
 }
 
+.suggestions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+.elements{
+    flex-basis: 30%;
+    
+}
+
+
+.dropdownbtn {
+    font-size: 20px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: #44E15D;
+}
+
+.dropdownbtn:hover {
+    background-color: #76b974;
+    color: #ffffff;
+}
+
+
+.suggest{
+    width: 30vw;
+    border-radius: 20px;
+}
+
 /* Chat Bubbles */
 
 .usertext, .botText {
