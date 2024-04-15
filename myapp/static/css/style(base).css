@@ -336,7 +336,10 @@ body{
     
 }
 
-
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto; 
+}
 .dropdownbtn {
     font-size: 20px;
     width: 100%;
