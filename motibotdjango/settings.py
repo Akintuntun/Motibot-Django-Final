@@ -85,8 +85,6 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgres://motibot_render_user:CGFQNuVuo87qlAVXYMZUuzuGYufTSRmw@dpg-cofouvuv3ddc739n2sug-a.singapore-postgres.render.com/motibot_render");
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
