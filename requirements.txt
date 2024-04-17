@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿absl-py==2.1.0
 aiofiles==23.2.1
 altair==5.3.0
@@ -147,3 +148,9 @@ wcwidth==0.2.13
 websockets==11.0.3
 Werkzeug==3.0.1
 wrapt==1.14.1
+=======
+tensorflow == 2.15.0
+keras == 2.15.0
+scikit-learn == 1.4.0
+numpy
+>>>>>>> parent of 07fea58 (Update requirements.txt)
