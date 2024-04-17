@@ -1,5 +1,6 @@
 tensorflow == 2.15
 keras == 2.15
+scikit-learn == 1.4.0
 numpy
 django
 djangorestframework
