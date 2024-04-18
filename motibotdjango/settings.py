@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-9m#ih=i7m4qdi16gc4gj+&4zz$_o^jsluwk8pwg343fbm08cjr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".onrender.com"]
 
 
 # Application definition
@@ -63,6 +63,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "whitenoise.middleware.WhiteNoiseMiddleware",
             ],
         },
     },
@@ -117,6 +118,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
