@@ -1,17 +1,21 @@
-FROM python:3.11.4-slim-bullseye
+# Use the official Python image as a base image
+FROM python:3.11
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Set the working directory in the container
 WORKDIR /app
 
-ENV PYTHONUNBUFFERED 1
-ENV PYTHONDONTWRITEBYTECODE 1
+# Copy the requirements file into the container at /app
+COPY requirements.txt /app/
 
-# install system dependencies
-RUN apt-get update
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# install dependencies
-RUN pip install --upgrade pip
-COPY ./requirements.txt /app/
-RUN pip install -r requirements.txt
+# Copy the project files into the container at /app
+COPY . /app/
 
-COPY . /app
 
-ENTRYPOINT [ "gunicorn", "core.wsgi", "-b", "0.0.0.0:8000"]
+ENTRYPOINT ["gunicorn","motibotdjango.wsgi"]
