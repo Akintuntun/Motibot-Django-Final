@@ -13,7 +13,7 @@
         <div class="chat_container">
             <div class="conversation" id="chatbot">
                 {% comment %} conversation {% endcomment %}
-                <p class="botText">{{ welcome_message }}<p>Motibot</p></p>
+                <p class="botText">{{ welcome_message }}<p class = "bot">Motibot</p></p>
             </div>
             <div class="suggestions">
                 <div class="dropup-center dropup elements">
@@ -55,7 +55,7 @@
                         <li><a class="dropdown-item" href="#">Could you help me?</a></li>
                         <li><a class="dropdown-item" href="#">I feel like I'm alone</a></li>
                         <li><a class="dropdown-item" href="#">I feel ugly.</a></li>
-                        <li><a class="dropdown-item" href="#">I wish i was better than them</a></li>
+                        <li><a class="dropdown-item" href="#">I wish I was better than them</a></li>
                         <li><a class="dropdown-item" href="#">I am so depressed</a></li>
                         <li><a class="dropdown-item" href="#">I am so stressed out</a></li>
                         <li><a class="dropdown-item" href="#">I want a break</a></li>
@@ -118,7 +118,7 @@
             $('#chatbot').append(userHTML);
             $('#chatbot').scrollTop($('#chatbot')[0].scrollHeight);
             $.get('/myapp/getResponse', { userMessage: usertext }).done(function(data) {
-                var returnedmessage = "<p class='botText'><span>" + data + "</span></p><p>Motibot</p>";
+                var returnedmessage = "<p class='botText'><span>" + data + "</span></p><p class = 'bot'>Motibot</p>";
                 $('#chatbot').append(returnedmessage);
                 $('#chatbot').scrollTop($('#chatbot')[0].scrollHeight);
             });
