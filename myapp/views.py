@@ -67,7 +67,6 @@ def getResponse(request):
     user_message = request.GET.get('userMessage')
     predicted_intent, confidence_score = predict_intent(user_message)
     response = get_response(predicted_intent)
-   
 
     if predicted_intent == "fact-12":
         directories = Directory.objects.all()
@@ -97,34 +96,6 @@ def getResponse(request):
             response = "Sorry, there are currently no services available. Please check back later."
 
         return HttpResponse(response)
-
-    if predicted_intent == "fact-12":
-        directories = Directory.objects.all()
-        if directories.exists():
-            directory_info = "<h2>Directory Information</h2>"
-            directory_info += "<table>"
-            directory_info += "<tr><th>Address</th><th>Name</th><th>Contact Info</th></tr>"
-            for directory in directories:
-                directory_info += f"<tr><td>{directory.address}</td><td>{directory.name}</td><td>{directory.contact_info}</td></tr>"
-            directory_info += "</table>"
-            response += "<br>" + directory_info
-        else:
-            response = "Sorry, there are currently no addresses, names, or contact information available."
-        return HttpResponse(response)
-    
-    if predicted_intent == "fact-13":
-        directories = Directory.objects.all()
-        if directories.exists():
-            directory_info = "<h2>Services Offered</h2>"
-            directory_info += "<ul>"
-            for directory in directories:
-                directory_info += f"<li>{directory.services}</li>"
-            directory_info += "</ul>"
-            response += "<br>" + directory_info
-        else:
-            response = "Sorry, there are currently no services available. Please check back later."
-        return HttpResponse(response)
-
     
     elif confidence_score > .5 :
         response = get_response(predicted_intent)
