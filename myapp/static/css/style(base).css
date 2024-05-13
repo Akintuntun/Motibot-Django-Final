@@ -357,7 +357,7 @@ body {
 }
 .dropdownbtn {
   font-size: 20px;
-  width: 100%;
+  width: 90%;
   border-radius: 50px;
   background-color: #44e15d;
 }
@@ -594,7 +594,7 @@ body {
 @media (max-width: 480px) {
   .dropdownbtn {
     font-size: 3vw;
-    width: 100%;
+    width: 90%;
     border-radius: 50px;
     background-color: #44e15d;
   }
