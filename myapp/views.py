@@ -71,30 +71,20 @@ def getResponse(request):
     if predicted_intent == "fact-12":
         directories = Directory.objects.all()
         if directories.exists():
-            directory_info = "<h2 class='botText'>Directory Information</h2>"
+            directory_info = "<h2 class='botText'>For San Pablo City, here is the available list.</h2>"
             directory_info += "<ul class='botText style='list-style-type: none;'>"
             for directory in directories:
+                services = directory.services.split()
+                formatted_services = ', '.join(services)
+                directory_info += f"<strong>Directory Information</strong> <br><br>"
                 directory_info += f"<strong>Address:</strong> {directory.address}<br>"
                 directory_info += f"<strong>Name:</strong> {directory.name}<br>"
-                directory_info += f"<strong>Contact Info:</strong> {directory.contact_info}<br><br>"
+                directory_info += f"<strong>Contact Info:</strong> {directory.contact_info}<br>"
+                directory_info += f"<strong>Services Offered:</strong> {formatted_services}<br><br>"
             directory_info += "</ul>"
             response += "<br>" + directory_info
         else:
-            response = "Sorry, there are currently no addresses, names, or contact information available."
-        return HttpResponse(response)
-
-    if predicted_intent == "fact-13":
-        directories = Directory.objects.all()
-        if directories.exists():
-            directory_info = "<h2 class='botText'>Services Offered</h2>"
-            directory_info += "<ul class='botText'>"
-            for directory in directories:
-                directory_info += f"{directory.services}"
-            directory_info += "</ul>"
-            response += "<br>" + directory_info
-        else:
-            response = "Sorry, there are currently no services available. Please check back later."
-
+            response = "Sorry, there are currently no directory available."
         return HttpResponse(response)
     
     elif confidence_score > .5 :

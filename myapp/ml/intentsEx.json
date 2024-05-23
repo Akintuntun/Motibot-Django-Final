@@ -1978,18 +1978,6 @@
         "responses": ["There are many types of mental health professionals. Psychologists, psychiatrists, counselors, clinicians, therapists, clinical Social Workers, and other mental health professionals. The variety of providers and their services may be confusing. Each has various levels of education, training, and may have different areas of expertise. Finding the professional who best fits your needs may require some research."]
     },
     {"tag": "fact-16",
-        "patterns": ["How can I find a mental health professional right for my child or myself?", "What should I consider when choosing a mental health professional?",
-        "What factors should I consider when choosing a mental health professional?",
-        "How can I ensure I select the right mental health provider?",
-        "What criteria should I use to evaluate mental health professionals?",
-        "Can you provide guidance on finding the best mental health professional?",
-        "How do I know if a mental health professional is a good fit for me?",
-        "How can I make an informed decision when choosing a mental health provider?",
-        "What qualities should I prioritize when selecting a therapist?",
-        "What steps can I take to find the most suitable mental health professional?"],
-        "responses": ["Feeling comfortable with the professional you or your child is working with is critical to the success of your treatment. Finding the professional who best fits your needs may require some research."]
-    },
-    {"tag": "fact-17",
         "patterns": ["Where else can I get help?", "What are alternative sources of support for mental health?",
         "Where can I turn for additional support with my mental health?",
         "What are some alternative sources of assistance for mental health issues?",
@@ -2003,7 +1991,7 @@
         "Where else can I find help for mental health issues?"],
         "responses": ["Where you go for help will depend on the nature of the problem and/or symptoms and what best fits you. Often, the best place to start is by talking with someone you trust about your concerns, such as a family member, friend, clergy, healthcare provider, or other professionals. Having this social support is essential in healing from mental illness, and you will be able to ask them for referrals or recommendations for trusted mental health practitioners. Search for mental health resources in your area. Secondly, there are people and places throughout the country that provide services to talk, to listen, and to help you on your journey to recovery. Thirdly, many people find peer support a helpful tool that can aid in their recovery. There are a variety of organizations that offer support groups for consumers, their family members, and friends. Some support groups are peer led while others may be led by a mental health professional."]
     },
-    {"tag": "fact-18",
+    {"tag": "fact-17",
         "patterns": ["What should I know before starting a new medication?", "What information should I consider regarding medication for mental health?",
         "What should I consider before starting a new medication?",
         "Can you provide advice on beginning a new medication?",
@@ -2016,7 +2004,7 @@
         "What should I expect when starting a new medication for mental health?"],
         "responses": ["The best source of information regarding medications is the physician prescribing them. He or she should be able to answer questions such as:    \n1. What is the medication supposed to do? \n2. When should it begin to take effect, and how will I know when it is effective? \n3. How is the medication taken and for how long? What food, drinks, other medicines, and activities should be avoided while taking this medication? \n4. What are the side effects and what should be done if they occur? \n5. What do I do if a dose is missed? \n6. Is there any written information available about this medication? \n7. Are there other medications that might be appropriate? \n8. If so, why do you prefer the one you have chosen? \n9. How do you monitor medications and what symptoms indicate that they should be raised, lowered, or changed? \n10. All medications should be taken as directed. Most medications for mental illnesses do not work when taken irregularly, and extra doses can cause severe, sometimes dangerous side effects. Many psychiatric medications begin to have a beneficial effect only after they have been taken for several weeks."]
     },
-    {"tag": "fact-19",
+    {"tag": "fact-18",
         "patterns": ["Where can I learn about types of mental health treatment?", "What resources provide information about mental health treatment options?",
         "How can I find information about different types of mental health treatments?",
         "Can you suggest resources for learning about mental health treatment options?",
@@ -2030,7 +2018,7 @@
         "Where can I research mental health treatment options?"],
         "responses": ["As per the information provided by Mental Health America, mental health conditions are often treated with medication, therapy or a combination of the two. However, there are many different types of treatment available, including but not limited to complementary & alternative Treatments, self-help plans, and peer support. Treatments are very personal and should be discussed by the person with the mental health conditions and his or her team."]
     },
-    {"tag": "fact-20",
+    {"tag": "fact-19",
         "patterns": ["Where can I go to find a support group?", "How can I find support groups for mental health?", "Where are mental health support groups located?",
         "How do I find a support group for mental health?",
         "Can you guide me on locating mental health support groups?",
@@ -2044,7 +2032,7 @@
         "Can you provide information on how to access mental health support groups?"],
         "responses": ["Many people find peer support a helpful tool that can aid in their recovery. There are a variety of organizations that offer support groups for consumers, their family members and friends. Some support groups are peer-led, while others may be led by a mental health professional."]
     },
-    {"tag": "fact-21",
+    {"tag": "fact-20",
         "patterns": ["Can you prevent mental health problems?", "How can I reduce my risk of developing mental health issues?", "What preventative measures can I take for mental health issues?",
         "Are there ways to prevent mental health problems?",
         "How can I lower my risk of developing mental health issues?",
@@ -2057,7 +2045,7 @@
         "Is there anything I can do to prevent mental health disorders?"],
         "responses": ["According to the Mental Health Management Group, while there is no guaranteed way to prevent mental health problems, there are steps you can take to reduce your risk. These steps include:\n1. Maintaining a healthy lifestyle, such as regular exercise, eating a nutritious diet, getting enough sleep, and avoiding or reducing substance use.\n2. Seeking support and staying connected with others can help build resilience and reduce the likelihood of developing mental health issues. It’s important to prioritize your mental health and seek support if you are experiencing any mental health issues."]
     },
-    {"tag": "fact-22",
+    {"tag": "fact-21",
         "patterns": ["Are there cures for mental health problems?", "is there any cure for mental health problems?", "Is mental illness curable?", "Can mental health conditions be permanently treated?",
         "Can mental health problems be cured?",
         "Can mental illness be completely treated?",
@@ -2070,7 +2058,7 @@
         "Is it possible to achieve complete recovery from mental illness?"],
         "responses": ["It is often more realistic and helpful to find out what helps with the issues you face. Talking, counseling, medication, friendships, exercise, good sleep and nutrition, and meaningful occupation can all help. For more information on this matter, you can refer to the Wellness in Mind official website."]
     },
-    {"tag": "fact-23",
+    {"tag": "fact-22",
         "patterns": ["What causes mental health problems?", "What factors contribute to mental health issues?",
         "What are some common causes of mental health problems?",
         "Can you explain the factors that contribute to mental health issues?",
@@ -2083,7 +2071,7 @@
         "What are some factors that may increase the risk of mental health disorders?"],
         "responses": ["As per the information provided by Mind.org, mental health problems can have a wide range of causes. It's likely that for many people there is a complicated combination of factors – although different people may be more deeply affected by certain things than others.\nFor example, the following factors could potentially result in a period of poor mental health:\n1. Childhood abuse, trauma, or neglect\n2. Experiencing discrimination and stigma, including racism\n3. Social disadvantage, poverty or debt\n4. Bereavement (losing someone close to you)\n5. Severe or long-term stress\nIt is essential to note that these are just a few examples, and mental health problems can be influenced by a wide range of factors."]
     },
-    {"tag": "fact-24",
+    {"tag": "fact-23",
         "patterns": ["What do I do if I'm worried about my mental health?", "How can I address worries about my mental health?","I'm worried about my mental health, what should I do?",  "What steps should I take if I suspect issues with my mental health?",
         "How can I seek help if I'm concerned about my mental well-being?",
         "I think I may have mental health concerns. What should I do next?",
@@ -2095,7 +2083,7 @@
         "Where can I find assistance if I'm worried about my mental health?"],
         "responses": ["The most important thing is to talk to someone you trust. This might be a friend, colleague or family member. In addition to talking to someone, it may be useful to find out more information about what you are experiencing. These things may help to get some perspective on what you are experiencing, and be the start of getting help."]
     },
-    {"tag": "fact-25",
+    {"tag": "fact-24",
         "patterns": ["How do I know if I'm unwell?", "How can I tell if I'm not feeling well mentally?",
         "What are signs that indicate I may not be feeling well mentally?",
         "How can I recognize if my mental state is not healthy?",
@@ -2105,7 +2093,7 @@
         "How do I assess my mental well-being?"],
         "responses": ["If your beliefs , thoughts , feelings or behaviors have a significant impact on your ability to function in what might be considered a normal or ordinary way, it would be important to seek help. For further information on this matter, you may refer to Wellness in Mind."]
     },
-    {"tag": "fact-26",
+    {"tag": "fact-25",
         "patterns": ["How can I maintain social connections?", "Tips for maintaining social connections?", "How to stay connected with others?",
         "How can I ensure I stay connected with others during challenging times?",
         "What strategies can I use to maintain social connections?",
@@ -2119,7 +2107,7 @@
         "How do I overcome feelings of loneliness and isolation?"],
         "responses": ["A lot of people are alone right now, but we don't have to be lonely. We're all in this together. Think about the different ways to connect that are most meaningful for you. For example, you might prefer a video chat over a phone call, or you might prefer to text throughout the day rather than one set time for a video call. Then, work with your social networks to make a plan. You might video chat with your close friends in the evening and phone a family member once a week. Remember to be mindful of people who may not be online. Check in by phone and ask how you can help. The quality of your social connections matter. Mindlessly scrolling through social media and liking a few posts usually doesn't build strong social connections. Make sure you focus on strategies that actually make you feel included and connected. If your current strategies don't help you feel connected, problem-solve to see if you can find a solution."]
     },
-    {"tag": "fact-27",
+    {"tag": "fact-26",
         "patterns": ["What's the difference between anxiety and stress?", "Differentiating between stress and anxiety?", "What's the distinction between stress and anxiety?",
         "Can you explain the distinction between stress and anxiety?",
         "How can I differentiate between stress and anxiety?",
@@ -2133,7 +2121,7 @@
         "Are there any defining features that help distinguish stress from anxiety?"],
         "responses": ["Stress and anxiety are often used interchangeably, and there is overlap between stress and anxiety. Stress is related to the same fight, flight, or freeze response as anxiety, and the physical sensations of anxiety and stress may be very similar. The cause of stress and anxiety are usually different, however. Stress focuses mainly on external pressures on us that we're finding hard to cope with. When we are stressed, we usually know what we're stressed about, and the symptoms of stress typically disappear after the stressful situation is over. Anxiety, on the other hand, isn't always as easy to figure out. Anxiety focuses on worries or fears about things that could threaten us, as well as anxiety about the anxiety itself. Stress and anxiety are both part of being human, but both can be problems if they last for a long time or have an impact on our well-being or daily life. For more comprehensive insights into this subject, further information can be sought through the American Psychological Association."]
     },
-    {"tag": "fact-28",
+    {"tag": "fact-27",
         "patterns": ["What's the difference between sadness and depression?", "Difference between sadness and depression", "Distinguishing between sadness and depression?",
         "How can I distinguish between feeling sad and experiencing depression?",
         "What are the key differences between sadness and depression?",
@@ -2145,7 +2133,7 @@
         "How do I know if what I'm feeling is more than just temporary sadness and might be depression?"],
         "responses": ["According to information provided by the Centers for Disease Control and Prevention (CDC), sadness is a normal reaction to a loss, disappointment, problems, or other difficult situations. Feeling sad from time to time is just another part of being human. In these cases, feelings of sadness go away quickly and you can go about your daily life. Other ways to talk about sadness might be feeling low, feeling down, or feeling blue. A person may say they are feeling depressed, but if it goes away on its own and doesn't impact life in a big way, it probably isn't the illness of depression. Depression can go by different names, such as clinical depression, major depressive disorder, or major depression. Depression can come up for no reason, and it lasts for a long time. It's much more than sadness or low mood. People who experience depression may feel worthless or hopeless. They may feel unreasonable guilt. Some people may experience depression as anger or irritability. It may be hard to concentrate or make decisions. Most people lose interest in things that they used to enjoy and may isolate themselves from others. There are also physical signs of depression, such as problems with sleep, appetite and energy and unexplainable aches or pains. Some may experience difficult thoughts about death or ending their life (suicide). Depression lasts longer than two weeks, doesn't usually go away on its own, and impacts your life. It's a real illness, and it is very treatable. It's important to seek help if you're concerned about depression."]
     },
-    {"tag": "fact-29",
+    {"tag": "fact-28",
         "patterns": ["what is the biological cause of depression?", "Biological factors contributing to depression?",
         "What are the biological factors that contribute to depression?",
         "Can you explain the biological causes of depression?",
@@ -2159,7 +2147,7 @@
         "How does aging affect the biological risk factors for depression?"],
         "responses": ["As per the information provided by the Centre for Clinical Interventions (CCI), the biological factors that might have some effect on depression include: genes, hormones, and brain chemicals. Depression often runs in families, which suggests that individuals may inherit genes that make them vulnerable to developing depression. Other biological causes for depression can include physical illness, the process of aging and gender."]
     },
-    {"tag": "fact-30",
+    {"tag": "fact-29",
         "patterns": ["how long can anxiety last?", "Duration of anxiety?", "How long can anxiety persist?",
         "What is the typical duration of anxiety?",
         "Can anxiety last for an extended period?",
@@ -2168,7 +2156,7 @@
         "Is there a limit to how long anxiety can last?"],
         "responses": ["According to Healthline, anxiety is the body’s natural response to stress, perceived threats, and fear. Anxiety usually goes away once the threat or stressor passes and your system calms down. However, if you have an anxiety disorder, anxiety can linger beyond the triggering event and become out of proportion. Chronic (long-term) or severe anxiety can seriously impair your daily functioning. While you can’t banish anxiety altogether, anxiety and anxiety disorders can be treated and managed."]
     },
-    {"tag": "fact-31",
+    {"tag": "fact-30",
         "patterns": ["what are the stages of anxiety?", "Phases or stages of anxiety?",  "Are there different levels of anxiety?", "What are the stages through which anxiety progresses?",
         "What are the different stages of anxiety?",
         "Can you describe the phases of anxiety?",
@@ -2180,7 +2168,7 @@
         "responses": [
         "As per the information provided by Time Wellness, anxiety levels are typically classified by the level of distress and impairment experienced into four categories namely, mild anxiety, moderate anxiety, severe anxiety and panic level anxiety."]
     },
-    {"tag": "fact-32",
+    {"tag": "fact-31",
         "patterns": ["at what age does anxiety peak?", "At what point in life does anxiety peak?", "When is anxiety most prevalent in a person's life?", "Age at which anxiety is most common?",
         "At what age is anxiety most prevalent?",
         "When is anxiety highest in a person's life?",
@@ -2194,7 +2182,7 @@
         "Can you provide insights into the age distribution of anxiety?"],
         "responses": ["According to the statistics provided by the Centers for Disease Control and Prevention (CDC), the percentage of adults who experienced mild, moderate, or severe symptoms of anxiety was highest among those aged 18–29 and decreased with age"]
     },
-    {"tag": "fact-33",
+    {"tag": "fact-32",
         "patterns": ["why is anxiety bad for you?","Why is prolonged anxiety detrimental to one's well-being?", "Negative effects of anxiety on health?",
         "What are the negative effects of anxiety on health?",
         "How does anxiety impact physical health?",
@@ -2208,7 +2196,7 @@
         "How does anxiety contribute to overall health decline?"],
         "responses": ["According to the Advanced Psychiatry Associates (APA), anxiety disorders can cause rapid heart rate, palpitations, and chest pain. you may also be at an increased risk of high blood pressure and heart disease. if you already have heart disease, anxiety disorders may raise the risk of coronary events."]
     },
-    {"tag": "fact-34",
+    {"tag": "fact-33",
         "patterns": ["what is the 3 3 3 rule for anxiety?", "Can you explain the concept of the 3-3-3 rule for anxiety?",
         "Can you explain the 3-3-3 rule for anxiety?",
         "What is the concept behind the 3 3 3 rule for anxiety?",
@@ -2222,6 +2210,5 @@
         "Can you offer tips on utilizing the 3-3-3 strategy during anxious moments?"],
         "responses": ["There's an anxiety-reducing technique called grounding. There are different versions of this, but an easy one to remember is the 3-3-3 rule. Mentally note three things you see, three sounds you hear, and then move three parts of your body. This exercise can help your mind refocus on something else. For additional information on this technique, you may refer to healthline.com"]
     }
-
     ]
 }

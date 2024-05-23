@@ -32,6 +32,39 @@ ALLOWED_HOSTS = [".onrender.com", "localhost", "motibot-django-final-1.onrender.
 
 # Application definition
 
+
+# Default session engine (Django stores sessions in the database)
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+# Ensure that cookies are only sent over HTTPS (useful for production)
+SESSION_COOKIE_SECURE = False  # Set to True in production
+
+# Expire session when the browser closes
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# Save the session to the database on every request
+SESSION_SAVE_EVERY_REQUEST = False
+
+
+
+# Logging configuration for debugging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
+
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -102,6 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+
 
 
 # Internationalization
