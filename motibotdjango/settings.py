@@ -118,7 +118,8 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgres://motibot_django_db_user:D5952cpFkhd8BQLV555bCx7cGlimYaqK@dpg-cp9jrtdds78s73cj5kcg-a.singapore-postgres.render.com/motibot_django_db")
+database_url = os.environ.get("DATABASE_URL")
+DATABASES["default"] = dj_database_url.parse(database_url)
 #postgres://motibot_django_db_user:D5952cpFkhd8BQLV555bCx7cGlimYaqK@dpg-cp9jrtdds78s73cj5kcg-a.singapore-postgres.render.com/motibot_django_db
 
 
