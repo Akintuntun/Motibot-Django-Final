@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -116,6 +117,9 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+DATABASES["default"] = dj_database_url.parse("postgres://motibot_django_db_user:D5952cpFkhd8BQLV555bCx7cGlimYaqK@dpg-cp9jrtdds78s73cj5kcg-a.singapore-postgres.render.com/motibot_django_db")
+#postgres://motibot_django_db_user:D5952cpFkhd8BQLV555bCx7cGlimYaqK@dpg-cp9jrtdds78s73cj5kcg-a.singapore-postgres.render.com/motibot_django_db
 
 
 # Password validation
