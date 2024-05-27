@@ -9,9 +9,8 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
 import os
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,15 +21,50 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-9m#ih=i7m4qdi16gc4gj+&4zz$_o^jsluwk8pwg343fbm08cjr"
+
+#SECRET_KEY = "django-insecure-9m#ih=i7m4qdi16gc4gj+&4zz$_o^jsluwk8pwg343fbm08cjr"
+SECRET_KEY = os.environ.get("SECRET_KEY","secret_key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get("DEBUG",True)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [".onrender.com", "localhost", "motibot-django-final-1.onrender.com","127.0.0.1"]
 
 
 # Application definition
+
+
+# Default session engine (Django stores sessions in the database)
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+# Ensure that cookies are only sent over HTTPS (useful for production)
+SESSION_COOKIE_SECURE = False  # Set to True in production
+
+# Expire session when the browser closes
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# Save the session to the database on every request
+SESSION_SAVE_EVERY_REQUEST = False
+
+
+
+# Logging configuration for debugging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -44,6 +78,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -83,6 +118,10 @@ DATABASES = {
     }
 }
 
+database_url = os.environ.get("DATABASE_URL")
+DATABASES["default"] = dj_database_url.parse(database_url)
+#postgres://motibot_django_db_user:D5952cpFkhd8BQLV555bCx7cGlimYaqK@dpg-cp9jrtdds78s73cj5kcg-a.singapore-postgres.render.com/motibot_django_db
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -103,6 +142,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -119,13 +159,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "/static/"
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'myapp', 'static'),
-]
-
+STATIC_ROOT = "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

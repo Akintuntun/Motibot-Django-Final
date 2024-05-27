@@ -13,7 +13,7 @@
         <div class="chat_container">
             <div class="conversation" id="chatbot">
                 {% comment %} conversation {% endcomment %}
-                <p class="botText">{{ welcome_message }}<p>Motibot</p></p>
+                <p class="botText">{{ welcome_message }}<p class = "bot">Motibot</p></p>
             </div>
             <div class="suggestions">
                 <div class="dropup-center dropup elements">
@@ -55,7 +55,7 @@
                         <li><a class="dropdown-item" href="#">Could you help me?</a></li>
                         <li><a class="dropdown-item" href="#">I feel like I'm alone</a></li>
                         <li><a class="dropdown-item" href="#">I feel ugly.</a></li>
-                        <li><a class="dropdown-item" href="#">I wish i was better than them</a></li>
+                        <li><a class="dropdown-item" href="#">I wish I was better than them</a></li>
                         <li><a class="dropdown-item" href="#">I am so depressed</a></li>
                         <li><a class="dropdown-item" href="#">I am so stressed out</a></li>
                         <li><a class="dropdown-item" href="#">I want a break</a></li>
@@ -63,6 +63,14 @@
                         <li><a class="dropdown-item" href="#">I feel ugly.</a></li>
                         <li><a class="dropdown-item" href="#">I hate myself!</a></li>
                         <li><a class="dropdown-item" href="#">I've thought about killing myself.</a></li>
+                    </ul>
+                </div>
+                <div class="dropup-center dropup elements">
+                    <button class="btn btn-secondary dropdown-toggle dropdownbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        DIRECTORY
+                    </button>
+                    <ul class="dropdown-menu suggest">
+                        <li><a class="dropdown-item" href="#">Where can I find a therapist or counselor for myself or my child?</a></li>
                     </ul>
                 </div>
             </div>
@@ -89,7 +97,7 @@
         </div>
         <div class="modal-body">
             <p style="text-align: justify;">
-                MotiBot is a research project created by students from LSPU San Pablo to explore mental health support. Due to the sensitivity of the topic, MotiBot's dataset is limited. It's not validated for real-world use and has a limited understanding of mental health topics. Some queries may not be understood by MotiBot due to its limited dataset. Please use MotiBot carefully and consult with healthcare professionals for mental health advice.
+                MotiBot is a research project created by students from LSPU San Pablo to explore mental health support. Due to the sensitivity of the topic, MotiBot's dataset is limited. It is not validated for real-world use and has a limited understanding of mental health topics. Some queries may not be understood by MotiBot due to its limited dataset. Please use MotiBot carefully and consult with healthcare professionals for mental health advice. Additionally, for your privacy, we do not save any data from user interactions; the conversation history is not retained.
             </p>
         </div>
         <div class="modal-footer">
@@ -118,7 +126,7 @@
             $('#chatbot').append(userHTML);
             $('#chatbot').scrollTop($('#chatbot')[0].scrollHeight);
             $.get('/myapp/getResponse', { userMessage: usertext }).done(function(data) {
-                var returnedmessage = "<p class='botText'><span>" + data + "</span></p><p>Motibot</p>";
+                var returnedmessage = "<p class='botText'><span>" + data + "</span></p><p class = 'bot'>Motibot</p>";
                 $('#chatbot').append(returnedmessage);
                 $('#chatbot').scrollTop($('#chatbot')[0].scrollHeight);
             });
